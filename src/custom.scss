@@ -1,0 +1,18 @@
+$primary: #fc6c4c;
+
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+$custom-colors: (
+  'gray': #e5e7eb,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color}:hover {
+    color: #fff !important;
+  }
+}
