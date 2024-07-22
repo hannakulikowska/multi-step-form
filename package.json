@@ -17,7 +17,7 @@
     "pre-commit": "lint-staged",
     "deploy": "gh-pages -d dist"
   },
-    "lint-staged": {
+  "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
       "eslint --fix",
       "prettier --write"
@@ -26,6 +26,7 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "react": "^18.3.1",
+    "react-bootstrap": "^2.10.4",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
