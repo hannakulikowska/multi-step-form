@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Poppins:wght@400;500;600&display=swap');
 
 :root {
+  box-sizing: border-box;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -8,6 +9,8 @@
 }
 
 body {
+  height: 100%;
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   background: #f3f3e3;
 }
@@ -27,4 +30,5 @@ h6 {
 p {
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 2rem;
 }

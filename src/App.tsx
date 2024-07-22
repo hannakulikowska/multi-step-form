@@ -1,4 +1,5 @@
 import './App.scss';
+import FormContainer from './components/FormContainer';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
         To join our community and participate in frontend challenges. Please fill out the following
         form.
       </p>
+      <FormContainer />
     </>
   );
 }
