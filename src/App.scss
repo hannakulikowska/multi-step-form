@@ -1,3 +1,6 @@
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
 form {
   width: 100%;
   max-width: 100%;
@@ -7,4 +10,17 @@ form {
     max-width: 640px;
     box-shadow: 10px 10px 0 0 rgba(250, 181, 100, 0.1);
   }
+}
+
+.stepper-circle {
+  width: 34px;
+  height: 34px;
+  transition: all 0.3s ease !important;
+}
+
+.stepper-line {
+  flex-grow: 1;
+  max-width: 100px;
+  height: 6px;
+  transition: background-color 0.3s ease;
 }
