@@ -3,35 +3,28 @@ import Button from 'react-bootstrap/Button';
 interface ButtonsProps {
   goToNextStep: () => void;
   goToPreviousStep: () => void;
-  currentStep: number;
+  isFirstStep: boolean;
   isFinalStep: boolean;
 }
 
-function Buttons({ goToNextStep, goToPreviousStep, currentStep, isFinalStep }: ButtonsProps) {
-  const isFirstStep = currentStep === 0;
-
+function Buttons({ goToNextStep, goToPreviousStep, isFirstStep, isFinalStep }: ButtonsProps) {
   return (
     <div className="d-flex justify-content-between">
-      <Button
-        variant="outline-primary"
-        type="button"
-        className={`text-capitalize ${isFirstStep ? 'visually-hidden' : 'visible'}`}
-        onClick={goToPreviousStep}>
-        Go back
-      </Button>
-      <Button
-        variant="primary"
-        type="button"
-        className={`text-capitalize text-light ms-auto ${isFinalStep ? 'd-none' : ''}`}
-        onClick={goToNextStep}>
-        Next step
-      </Button>
+      {!isFirstStep && (
+        <Button
+          variant="outline-primary"
+          type="button"
+          className="text-capitalize"
+          onClick={goToPreviousStep}>
+          Go back
+        </Button>
+      )}
       <Button
         variant="primary"
-        type="submit"
-        className={`text-capitalize text-light ms-auto ${isFinalStep ? '' : 'd-none'}`}
-        onClick={goToNextStep}>
-        Submit
+        type={isFinalStep ? 'submit' : 'button'}
+        className="text-capitalize text-light ms-auto"
+        onClick={isFinalStep ? undefined : goToNextStep}>
+        {isFinalStep ? 'Submit' : 'Next step'}
       </Button>
     </div>
   );
