@@ -1,7 +1,15 @@
 $primary: #fc6c4c;
+$dark: #111827;
 $small-font-size: 0.875rem;
 $text-muted: #6b7280;
-$headings-color: #111827;
+$headings-color: $dark;
+$form-label-font-size: 0.875rem;
+$form-label-font-weight: 500;
+$form-label-color: $dark;
+$input-placeholder-color: #9ca3af;
+$input-focus-box-shadow: none;
+$input-focus-border-color: $primary;
+$input-border-radius: 0.625rem;
 
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/variables';
