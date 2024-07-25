@@ -24,3 +24,22 @@ form {
   height: 6px;
   transition: background-color 0.3s ease;
 }
+
+.steps {
+  position: relative;
+}
+.steps::before,
+.steps::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #e5e7eb;
+  position: absolute;
+}
+.steps::before {
+  top: -2rem;
+}
+.steps::after {
+  bottom: -2rem;
+}
