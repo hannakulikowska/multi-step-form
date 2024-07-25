@@ -27,3 +27,17 @@ p {
   font-weight: 400;
   margin-bottom: 2rem;
 }
+
+label {
+  display: block;
+  text-align: left;
+}
+
+input::placeholder {
+  font-size: 0.875rem;
+}
+
+input:focus-visible {
+  border-color: #fc6c4c;
+  outline: 0;
+}
