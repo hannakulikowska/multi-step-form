@@ -9,7 +9,7 @@ interface ButtonsProps {
 
 function Buttons({ goToNextStep, goToPreviousStep, isFirstStep, isFinalStep }: ButtonsProps) {
   return (
-    <div className="d-flex justify-content-between">
+    <div className="buttons d-flex justify-content-between mt-auto">
       {!isFirstStep && (
         <Button
           variant="outline-primary"

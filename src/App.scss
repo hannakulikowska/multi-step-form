@@ -25,11 +25,12 @@ form {
   transition: background-color 0.3s ease;
 }
 
-.steps {
+.steps,
+.buttons {
   position: relative;
 }
 .steps::before,
-.steps::after {
+.buttons::before {
   content: '';
   display: block;
   width: 100%;
@@ -37,9 +38,7 @@ form {
   background-color: #e5e7eb;
   position: absolute;
 }
-.steps::before {
+.steps::before,
+.buttons::before {
   top: -2rem;
-}
-.steps::after {
-  bottom: -2rem;
 }
