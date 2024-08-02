@@ -10,6 +10,7 @@ $input-placeholder-color: #9ca3af;
 $input-focus-box-shadow: none;
 $input-focus-border-color: $primary;
 $input-border-radius: 0.625rem;
+$input-font-size: 0.875rem;
 
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/variables';
@@ -26,4 +27,31 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   .btn-outline-#{$color}:hover {
     color: #fff !important;
   }
+}
+
+.btn.btn-outline-secondary {
+  --bs-btn-padding-x: 1.125rem;
+  --bs-btn-padding-y: 1.125rem;
+  --bs-btn-font-family: 'Poppins', sans-serif;
+  --bs-btn-font-size: 0.875rem;
+  --bs-btn-font-weight: 500;
+  --bs-btn-line-height: 1;
+  --bs-btn-border-radius: 10px;
+  text-align: left;
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: #111827;
+  --bs-btn-border-color: #d1d5db;
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+  --bs-btn-active-color: #111827;
+}
+
+.btn-outline-secondary:hover {
+  color: #111827 !important;
+}
+
+.btn-check:checked + .btn-outline-secondary {
+  background-color: #fff;
+  border-color: #fc6c4c;
 }
