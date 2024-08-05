@@ -30,7 +30,9 @@ function RadioButtonWithIcon({ id, name, imgSrc, label }: RadioButtonWithIconPro
       <label
         className="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-start text-capitalize"
         htmlFor={id}>
-        <div className="rounded-circle p-2 bg-primary me-4">
+        <div
+          className="rounded-circle p-2 bg-primary me-4"
+          style={{ minWidth: '2.25rem', minHeight: '2.25rem' }}>
           <img src={imgSrc} alt={label} />
         </div>
         {label}
