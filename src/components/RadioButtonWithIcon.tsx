@@ -1,3 +1,5 @@
+import { useFormContext } from './hooks/useFormContext';
+
 interface RadioButtonWithIconProps {
   id: string;
   name: string;
@@ -6,9 +8,25 @@ interface RadioButtonWithIconProps {
 }
 
 function RadioButtonWithIcon({ id, name, imgSrc, label }: RadioButtonWithIconProps) {
+  const { formData, updateFormData } = useFormContext();
+  const isChecked = formData[name] === id;
+
+  const handleChange = () => {
+    updateFormData(name, id);
+  };
+
   return (
     <div className="col-md-6 mb-3">
-      <input id={id} name={name} type="radio" className="btn-check" required autoComplete="off" />
+      <input
+        id={id}
+        name={name}
+        type="radio"
+        className="btn-check"
+        required
+        autoComplete="off"
+        checked={isChecked}
+        onChange={handleChange}
+      />
       <label
         className="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-start text-capitalize"
         htmlFor={id}>
