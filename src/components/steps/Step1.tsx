@@ -72,7 +72,7 @@ const Step1 = () => {
       <Form.Group className="col-md-6 mb-3" controlId="formPortfolioLink">
         <Form.Label>Portfolio/GitHub Link</Form.Label>
         <Form.Control
-          type="text"
+          type="url"
           placeholder="github.com/johndoe"
           required
           value={portfolioLink}
