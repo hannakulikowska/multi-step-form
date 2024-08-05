@@ -42,3 +42,37 @@ form {
 .buttons::before {
   top: -2rem;
 }
+
+/* CUSTOM CHECKBOX */
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox::before {
+  content: '';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #111827;
+  border-radius: 6px;
+  margin-right: 1.5rem;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.btn-check[type='checkbox']:checked + .custom-checkbox::before {
+  background-color: #fc6c4c;
+  border-color: #fc6c4c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-check[type='checkbox']:checked + .custom-checkbox::before {
+  content: '✓';
+  color: #fff;
+  font-size: 0.875rem;
+}

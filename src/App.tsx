@@ -1,6 +1,7 @@
 import './App.scss';
 import FormContainer from './components/FormContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { FormProvider } from './components/FormContext';
 
 function App() {
   return (
@@ -11,9 +12,11 @@ function App() {
         form.
       </p>
       <BrowserRouter>
-        <Routes>
-          <Route path="/*" element={<FormContainer />} />
-        </Routes>
+        <FormProvider>
+          <Routes>
+            <Route path="/*" element={<FormContainer />} />
+          </Routes>
+        </FormProvider>
       </BrowserRouter>
     </>
   );
