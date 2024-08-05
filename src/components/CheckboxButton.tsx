@@ -9,7 +9,10 @@ interface CheckboxButtonProps {
 
 const CheckboxButton: React.FC<CheckboxButtonProps> = ({ id, name, label }) => {
   const { formData, updateFormData } = useFormContext();
-  const [isChecked, setIsChecked] = useState<boolean>(formData[id] || false);
+  const [isChecked, setIsChecked] = useState<boolean>(() => {
+    const value = formData[id];
+    return typeof value === 'boolean' ? value : false;
+  });
 
   useEffect(() => {
     updateFormData(id, isChecked);
